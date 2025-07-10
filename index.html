@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>freeCodeCamp Email Analytics Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📧 freeCodeCamp Email Analytics</h1>
+            <p>Insights from Quincy Larson's Weekly Newsletter Archive</p>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="total-emails">-</div>
+                <div class="stat-label">Total Emails</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="total-links">-</div>
+                <div class="stat-label">Total Links</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avg-links">-</div>
+                <div class="stat-label">Avg Links per Email</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="date-range">-</div>
+                <div class="stat-label">Date Range</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-container">
+                <h3>📅 Emails Over Time</h3>
+                <canvas id="emails-timeline"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>⏱️ Content Duration Distribution</h3>
+                <canvas id="duration-chart"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>🔗 Links per Email Distribution</h3>
+                <canvas id="links-distribution"></canvas>
+            </div>
+            
+            <div class="chart-container">
+                <h3>📚 Most Common Topics</h3>
+                <canvas id="topics-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="insights-section">
+            <h3>🎯 Key Insights</h3>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h4>Most Productive Period</h4>
+                    <p id="productive-period">Analyzing...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Popular Content Types</h4>
+                    <p id="content-types">Analyzing...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Learning Time Investment</h4>
+                    <p id="time-investment">Analyzing...</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Top Quote Authors</h4>
+                    <p id="quote-authors">Analyzing...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="recent-activity">
+            <h3>📰 Recent Newsletter Content</h3>
+            <div id="recent-emails" class="email-list">
+                Loading recent emails...
+            </div>
+        </div>
+    </div>
+
+    <script src="analytics.js"></script>
+</body>
+</html>
